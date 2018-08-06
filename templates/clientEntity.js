@@ -1,7 +1,7 @@
 // 
 // Generic client entity methods and signals that are triggered
 // 
-// Please use as template for client entity scripts
+// Use as a template for your client entity scripts
 // 
 // Client entity scripts are run on a interface instance. Meaning each avatar connected
 // to a domain have one instance of this script running locally and one client controls 
@@ -9,7 +9,7 @@
 // Best for physics changes.
 //
 // For client entity scripts that require the same functionality across different entities
-// with minimal code duplication, see instance shared scripts folder.
+// with minimal code duplication, see "./sharedPrototype" folder.
 // 
 
 (function() {
