@@ -1,36 +1,36 @@
-// 
+//
 // Generic client entity methods and signals that are triggered
-// 
+//
 // Use as a template for your client entity scripts
-// 
+//
 // Client entity scripts are run on a interface instance. Meaning each avatar connected
-// to a domain have one instance of this script running locally and one client controls 
+// to a domain have one instance of this script running locally and one client controls
 // an entity at one time called "ownership over that entity".
 // Best for physics changes.
 //
 // For client entity scripts that require the same functionality across different entities
 // with minimal code duplication, see "./sharedPrototype" folder.
-// 
+//
 
 (function() {
-    
+
     var _entityID;
     var _this;
 
     var I_AM_STATIC_VARIABLE = 200;
     // variables
-    
+
     function Entity() {
 
     }
-    
+
     Entity.prototype = {
 
         // REQUIRED FUNCTIONS
         preload: function(entityID) {
-            // runs when this script is refreshed or a 
+            // runs when this script is refreshed or a
             // client connects to a domain where this entity is present
-            _entityID = entityID; 
+            _entityID = entityID;
             _this = this;
         },
 
@@ -53,7 +53,7 @@
 
         mouseMoveOnEntity: function (entityID, pointerEvent) {},
         mousePressOnEntity: function (entityID, event) {},
-        mouseReleaseOnEntity: function (entityID, event) {}, 
+        mouseReleaseOnEntity: function (entityID, event) {},
         mouseDoublePressOffEntity: function (pointerEvent) {},
 
         hoverEnterEntity: function (entityID, pointerEvent) {},
@@ -72,13 +72,17 @@
         // Collision properties https://docs.highfidelity.com/api-reference/globals#Collision
         collisionWithEntity: function (idA, idB, collision) {}, // https://docs.highfidelity.com/api-reference/namespaces/entities#.collisionWithEntity
 
-        // DELETE 
+        // DELETE
         // triggered when entity is deleted
         deletingEntity: function (entityID) {},
 
         // CONTROLLER METHODS
         // params are: entityID, string "<"left" || "right">,<MyAvatar.UUID>" ex "left,userID"
         // https://docs.highfidelity.com/api-reference/namespaces/controller
+
+        // Start/Stop Trigger methods
+        startTrigger: function (entityID, handUserID) {},
+        stopTrigger: function (entityID, handUserID) {},
 
         // Far Trigger Entity methods
         startFarTrigger: function (entityID, handUserID) {},
