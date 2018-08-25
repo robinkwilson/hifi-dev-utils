@@ -1,13 +1,15 @@
 //
 // Constructor for simple color changing cube every 1 second using an interval.
 // This constructor is imported to instance1.js and instance2.js and instance3.js.
-// 
+//
 // Intends to show a common constructor for client entity scripts with unique variables
 // For client entity scripts that require the same functionality across different entities
 // with minimal code duplication.
 //
+// Host on a cloud storage solution such as Amazon S3.
+//
 
-/* global module */
+/* global module print Script Entities */
 
 // static variables shared across all instances
 var INTERVAL_TIME = 1000; // ms change color interval
@@ -67,7 +69,7 @@ Constructor.prototype = {
         if (this.index === this.colorArray.length) {
             this.index = 0;
         }
-        
+
         return this.colorArray[this.index];
     }
     // END COLOR UTILITIES
