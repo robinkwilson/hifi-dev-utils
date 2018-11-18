@@ -80,10 +80,6 @@
         // params are: entityID, string "<"left" || "right">,<MyAvatar.UUID>" ex "left,userID"
         // https://docs.highfidelity.com/api-reference/namespaces/controller
 
-        // Start/Stop Trigger methods
-        startTrigger: function (entityID, handUserID) {},
-        stopTrigger: function (entityID, handUserID) {},
-
         // Far Trigger Entity methods
         startFarTrigger: function (entityID, handUserID) {},
         continueFarTrigger: function (entityID, handUserID) {},
@@ -111,7 +107,6 @@
         releaseEquip: function (entityID, handUserID) {},
     }
 
-
     return new Entity();
 
-})();
+});
