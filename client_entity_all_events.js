@@ -1,5 +1,5 @@
 //
-// Generic client entity methods and signals that are triggered
+// Generic client entity methods and signals that are triggered by mouse or controller interactions
 //
 // Use as a template for your client entity scripts
 //

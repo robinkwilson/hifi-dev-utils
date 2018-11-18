@@ -1,5 +1,6 @@
 //
 // Use as a template for an entity with a client and server script
+// Avatar action on entity -> Client method -> Server method -> Client method
 //
 // Each client script runs for each user for the entity. 
 // One server script per entity.
