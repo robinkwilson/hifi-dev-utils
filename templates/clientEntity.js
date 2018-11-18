@@ -41,16 +41,23 @@
             // reset anything else that needs to be
         },
 
-
         // EVENT LISTENERS FOR THE ENTITY
+
+        /* 
+            Entity Event Listener Notes: 
+                For mouse/trigger click on an entity to do an action
+                    Use: startNearTrigger + startFarTrigger + clickReleaseOnEntity
+        */
 
         // MOUSECLICK METHODS - not triggered by controller
         // params are: entityID, event PointerEvent (https://docs.highfidelity.com/api-reference/globals#PointerEvent)
         // https://docs.highfidelity.com/api-reference/namespaces/entities#.clickDownOnEntity
+        clickReleaseOnEntity: function (entityID, pointerEvent) {
+            if (pointerEvent.isPrimaryButton) {} // will only work on left mouse click release event (see PointerEvent)
+        },
         clickDownOnEntity: function (entityID, pointerEvent) {},
-        clickReleaseOnEntity: function (entityID, pointerEvent) {},
         holdingClickOnEntity: function (entityID, pointerEvent) {},
-
+        
         mouseMoveOnEntity: function (entityID, pointerEvent) {},
         mousePressOnEntity: function (entityID, event) {},
         mouseReleaseOnEntity: function (entityID, event) {},
@@ -105,6 +112,7 @@
         startEquip: function (entityID, handUserID) {},
         continueEquip: function (entityID, handUserID) {},
         releaseEquip: function (entityID, handUserID) {},
+
     }
 
     return new Entity();
